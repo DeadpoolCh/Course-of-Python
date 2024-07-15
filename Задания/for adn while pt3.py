@@ -72,3 +72,52 @@
 #             count+=1
 #     if count==2:
 #         print(i)
+
+# ************************
+# Экзамен
+
+# n=int(input())
+# for i in range(1,n+1):
+#     if i==1 or i==n: print('*'*19)
+#     else:
+#         print('*'+' '*(19-2)+'*')
+
+# n=str(input())
+# len=len(n)
+# n=int(n)
+# if len==3: print(n%10)
+# elif len==4: print((n//10)%10)
+# else: print((n//10**(len-3))%10)
+
+# n=int(input())
+# count3=0
+# countlast=0
+# count2=0
+# summore5=0
+# multmore7=1
+# count0and5=0
+# countmore7=0
+# lastdigit=n%10
+# while n>0:
+#     digit=n%10
+#     if digit==3: count3+=1
+#     if digit==lastdigit: countlast+=1
+#     if digit==0 or digit==5: count0and5+=1
+#     if digit%2==0: count2+=1
+#     if digit>7:
+#         countmore7+=1
+#         multmore7*=digit
+#         if countmore7==1: more7=digit
+#     if digit>5: summore5+=digit
+#     n=n//10
+# print(count3,countlast,count2,summore5,sep='\n')
+# if countmore7==0: print(1)
+# elif countmore7==1: print(more7)
+# else: print(multmore7)
+# print(count0and5)
+
+# for a in range(1,33):
+#     for b in range(a,33):
+#         for c in range(1,33):
+#             for d in range(c,33):
+#                 if a**3+b**3==c**3+d**3 and a!=b and b!=c and c!=d and a!=c and b!=d: print(a**3+b**3)
