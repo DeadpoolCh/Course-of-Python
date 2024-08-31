@@ -64,28 +64,31 @@
 # 		print(*trig[i])
 # pascal(int(input()))
 
-# s=input().split()
-# # s='w w w o r l d g g g g r e a t t e c c h e m g g p w w'.split()
-# print(s)
-# alldoobles=[]
-# doobles=[]
-# for i in range(0,len(s)-1):
-# 	print(i,s[i],'--', i+1,s[i+1])
-# 	if s[i]==s[i+1]:
-# 		print('YES')
-# 		doobles.append(s[i])
-# 		if i+1==len(s)-1 and i==len(s)-2 and s[i]==s[i+1]:
-# 			print('accepted')
-# 			doobles.append(s[i+1])
-# 			alldoobles.append(doobles)
-# 		else:
-# 			doobles.append(s[i+1])
-# 			alldoobles.append(doobles)
-# 	else:
-# 		doobles.append(s[i])
-# 		alldoobles.append(doobles)
-# 		doobles=[]
-# print(alldoobles)
+# str=input().split()
+# dooble=[]
+# temp=[]
+# for i in range(len(str)-1):
+# 	temp.append(str[i])
+# 	if str[i] != str[i + 1]:
+# 		dooble.append(temp)
+# 		temp = []
+# temp.append(str[-1])
+# dooble.append(temp)
+# print(dooble)
+
+# def chunked(list,chunk):
+# 	output=[]
+# 	for i in range(0,len(list),chunk):
+# 		output.append(list[i:i+chunk])
+# 	return output
+# print(chunked(input().split(),int(input())))
+
+# str=input().split()
+# output=[[]]
+# for i in range(1,len(str)+1):
+# 	for j in range(len(str)-i+1):
+# 		output.append(str[j:j+i])
+# print(output)
 
 # *************************************************************************
 
@@ -301,6 +304,39 @@
 # 		print(str(c).ljust(3), end=' ')
 # 	print()
 
+# n=[int(i) for i in input().split()]
+# matrix = [[0] * n[1] for _ in range(n[0])]
+# for i in range(n[0]):
+#     for j in range(n[1]):
+#         matrix[i][j] = (i + j) % n[1] + 1
+# for row in matrix:
+#     print(*row)
+
+# n=[int(i) for i in input().split()]
+# matrix = [[0] * n[1] for _ in range(n[0])]
+# num = 1
+# for i in range(n[0]):
+#     if i % 2 == 0:
+#         for j in range(n[1]):
+#             matrix[i][j] = num
+#             num += 1
+#     else:
+#         for j in range(n[1] - 1, -1, -1):
+#             matrix[i][j] = num
+#             num += 1
+# for row in matrix:
+#     print(*row)
+
+# n,m = [int(i) for i in input().split()]
+# matrix = [[0] * m for _ in range(n)]
+# num = 1
+# for i in range(n+m):
+#     for j in range(n):
+#         for k in range(m):
+#             if j+k==i: matrix[j][k] = num; num += 1
+# for row in matrix:
+#     print(*row)
+
 # n=int(input())
 # matrix=[[1 for _ in range(n)] for _ in range(n)]
 # for i in range(n):
@@ -338,20 +374,28 @@
 # for row in mult:
 # 	print(*row, end='\n')
 
-n=int(input())
-matrix=[[int(i) for i in input().split()] for _ in range(n)]
-stage=int(input())
-matrix2=matrix[:]
-mult=[[0 for _ in range(n)] for _ in range(n)]
-for _ in range(stage-1):
-	for i in range(n):
-		for j in range(n):
-			for x in range(n):
-				mult[i][j]+=matrix[i][x]*matrix2[x][j]
-	matrix2=mult[:]
-	mult=[[0 for _ in range(n)] for _ in range(n)]
-for row in matrix2:
-	print(*row, end='\n')
+# n=int(input())
+# matrix=[[int(i) for i in input().split()] for _ in range(n)]
+# stage=int(input())
+# matrix2=matrix[:]
+# mult=[[0 for _ in range(n)] for _ in range(n)]
+# for _ in range(stage-1):
+# 	for i in range(n):
+# 		for j in range(n):
+# 			for x in range(n):
+# 				mult[i][j]+=matrix[i][x]*matrix2[x][j]
+# 	matrix2=mult[:]
+# 	mult=[[0 for _ in range(n)] for _ in range(n)]
+# for row in matrix2:
+# 	print(*row, end='\n')
+
+
+
+
+
+
+
+
 
 
 

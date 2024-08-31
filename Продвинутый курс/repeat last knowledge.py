@@ -1,5 +1,6 @@
 # a,b=int(input()),int(input())
 # print(a+b,a-b,a*b,a/b,a//b,a%b,(a**10+b**10)**0.5,sep='\n')
+from itertools import count
 
 # mass,height=float(input()),float(input())
 # imt=mass/(height**2)
@@ -34,12 +35,11 @@
 # 	print(sac.lstrip(','))
 # else: print(number)
 
-# n=[int(i) for i in range(int(input()))]
-# k=int(input())
-# for i in range(1,len(n),k):
-# 	n.remove(n[i])
-# 	print(len(n),n,sep='\n')
-# Надо доделать
+# var=0
+# n,k=int(input()),int(input())
+# for i in range(1,n+1):
+#     var=(var+k)%i
+# print(var+1)
 
 # ****************************************************************
 
@@ -102,20 +102,22 @@
 # 			if figure[i]==n and figure[j]==k:
 # 				if abs(i+j)%2==0: print('Руслан')
 # 				else: print('Тимур')
-# Доделать
 
 # print(len(max(input().split('О'))))
 
 # n=[input() for i in range(int(input()))]
 # brokservers=[]
-# count=0
-# for i in n:
-# 	count+=1
-# 	for j in i:
-# 		if j in ['a','n','t','o','n']:
-# 			brokservers.append(count)
+# for i in range(len(n)):
+#     count=0
+#     for ant in 'anton':
+#         if ant in n[i]:
+#             n[i]=n[i][n[i].index(ant)+1:]
+#             count+=1
+#     if count==5:
+#         brokservers.append(i+1)
 # print(*brokservers)
-# Доделать
+
+
 
 # word=input()+' запретил букву'
 # abc=[chr(i) for i in range(ord('а'),ord('я')+1)]

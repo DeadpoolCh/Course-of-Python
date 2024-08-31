@@ -1,6 +1,7 @@
 # def matrix(n=1,m=None,value=0):
 #     if m==None: m=n
 #     return [[value for _ in range(m)] for _ in range(n)]
+from functools import reduce
 
 # def count_args(*args):
 #     return len(args)
@@ -255,42 +256,83 @@
 # print(all(trueip))
 
 # a,b=int(input()),int(input())
-a,b=10,25
-def check(start,stop):
-    numbers=[i for i in range(start,stop+1)]
-    not_nul=filter(lambda x: "0" not in str(x),numbers)
-    return list(not_nul)
-print(check(a,b))
+# def check(start,stop):
+#     result=[]
+#     numbers=[i for i in range(start,stop+1)]
+#     not_nul=filter(lambda x: "0" not in str(x),numbers)
+#     for num in not_nul:
+#         if all(map(lambda x:num%int(x)==0,str(num))): result.append(num)
+#     return result
+# print(*check(a,b))
 
+# password=input()
+# def check_password(password):
+#     if all([any(map(lambda x: x.isdigit(),password)),any(map(lambda x: x.islower(),password)),any(map(lambda x: x.isupper(),password)),len(password)>6]): return "YES"
+#     else: return "NO"
+# print(check_password(password))
 
+# classes = [{name: int(mark) for name, mark in (input().split() for _ in range(int(input())))} for _ in range(int(input()))]
+# def check_students(clas):
+#     if all([any(map(lambda x: x == 5, stud.values())) for stud in clas]): return "YES"
+#     else: return "NO"
+# print(check_students(classes))
 
+# ***********************************************
+# Экзамен
+# ***********************************************
 
+# def generate_letter(mail,name,date,time,place,teacher='Тимур Гуев', number=17):
+    # return f'To: {mail}\nПриветствую, {name}!\nВам назначен экзамен, который пройдет {date}, в {time}.\nПо адресу: {place}.\nЭкзамен будет проводить {teacher} в кабинете {number}.\nЖелаем удачи на экзамене!'
 
+# def pretty_print(data, side='-', delimiter='|'):
+#     data = [str(x) for x in data]
+#     delimiter=' '+delimiter+' '
+#     datas=delimiter.join(data)
+#     print(f' {side*(len(datas)+2)} \n{delimiter.lstrip()}{datas}{delimiter.rstrip()}\n {side*(len(datas)+2)} ')
 
+# def concat(*args,sep=' '):
+#     args=[str(i) for i in args]
+#     return sep.join(args)
 
+# def product_of_odds(data):
+#     from functools import reduce
+#     return reduce(lambda x, y: x * y, filter(lambda x: x % 2 == 1, data),1)
 
+# words = 'the world is mine take a look what you have started'.split()
+# print(*list(map(lambda x: '"'+x+'"', words)))
 
+# numbers = [18, 191, 9009, 5665, 78, 77, 45, 23, 19991, 908, 8976, 6565, 5665, 10, 1000, 908, 909, 232, 45654, 786]
+# print(*list(filter(lambda x: x if str(x)!=str(x)[::-1] else '', numbers)))
 
+# numbers = [(10, -2, 3, 4), (-13, 56), (1, 9, 2), (-1, -9, -45, 32), (-1, 5, 1), (17, 0, 1), (0, 1), (3,), (39, 12), (11, -23), (10, -100, 21, 32), (3, -8), (1, 1)]
+# sorted_numbers = sorted(numbers, key=lambda x:sum(x)//len(x), reverse=True)
+# print(sorted_numbers)
 
+# def call(func,*args):
+#     return func(*args)
 
+# def compose(outfun,infun):
+#     return lambda x:outfun(infun(x))
 
+# def arithmetic_operation(operation):
+#     if operation == '+': return lambda x,y: x+y
+#     elif operation == '-': return lambda x,y: x-y
+#     elif operation == '*': return lambda x,y: x*y
+#     elif operation == '/': return lambda x,y: x/y
 
+# s=input().split()
+# print(*sorted(s,key=lambda x:x.lower()))
 
+# words=[input() for _ in range(int(input()))]
+# ords=[sum([ord(j)-ord('A') for j in i.upper()]) for i in words]
+# words=sorted(dict(zip(words,ords)).items(),key=lambda x:(x[1],x[0]))
+# for word in words:
+#     print(word[0])
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# ips=[[int(j) for j in input().split('.')] for _ in range(int(input()))]
+# ips=[[str(j) for j in i] for i in sorted(ips)]
+# ip=['.'.join(i) for i in ips]
+# print(*ip,sep='\n')
 
 
 
