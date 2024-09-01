@@ -1,4 +1,9 @@
 # планиметрия, стериометрия, эконом, теорчисл, уравнение
+from tempfile import tempdir
+
+from numpy import number
+from numpy.ma.core import count
+from numpy.matrixlib.defmatrix import matrix
 
 # list1 = [[1, 7, 8], [9, 7, 102], [6, 106, 105], [100, 99, 98, 103], [1, 2, 3]]
 # maximum = -10**5
@@ -388,6 +393,98 @@
 # 	mult=[[0 for _ in range(n)] for _ in range(n)]
 # for row in matrix2:
 # 	print(*row, end='\n')
+
+# ***********************************************************************
+# Экзамен
+# ***********************************************************************
+
+# list=input().split()
+# chunk=int(input())
+# output,temp=[],[]
+# for i in range(chunk):
+# 	for j in range(i,len(list),chunk):
+# 		temp.append(list[j])
+# 	output.append(temp)
+# 	temp=[]
+# print(output)
+
+# n=int(input())
+# matrix=[[int(i) for i in input().split()] for _ in range(n)]
+# region=[]
+# for i in range(n):
+# 	for j in range(n):
+# 		if i>=n-1-j:
+# 			region.append(matrix[i][j])
+# print(max(region))
+
+# n=int(input())
+# matrix=[[int(i) for i in input().split()] for _ in range(n)]
+# for i in range(n):
+# 	for j in range(n):
+# 		print(matrix[j][i],end=' ')
+# 	print()
+
+# n=int(input())
+# matrix=[["." for _ in range(n)] for _ in range(n)]
+# for i in range(n):
+# 	for j in range(n):
+# 		if j==n//2: matrix[i][j]="*"
+# 		if i==n//2: matrix[i][j]="*"
+# 		if i==j: matrix[i][j]="*"
+# 		if i+j+1==n: matrix[i][j]="*"
+# for row in matrix:
+# 	print(*row)
+
+# n=int(input())
+# matrix=[[int(i) for i in input().split()] for _ in range(n)]
+# accepts=[]
+# for i in range(n):
+# 	for j in range(n):
+# 		if matrix[i][j]!=matrix[n-j-1][n-1-i]: accepts.append('NO')
+# if 0<accepts.count('NO')<=n**2-n: print('NO')
+# else: print('YES')
+
+# n=int(input())
+# matrix=[[int(i) for i in input().split()] for _ in range(n)]
+# transp,temp=[],[]
+# numbers=[i for i in range(1,n+1)]
+# count=0
+# for i in range(n):
+# 	for j in range(n):
+# 		temp.append(matrix[j][i])
+# 	transp.append(temp)
+# 	temp=[]
+# for i in range(n):
+# 	if set(matrix[i])==set(numbers) and set(transp[i])==set(numbers): count+=1
+# if count==n: print('YES')
+# else: print('NO')
+
+# checkdesk=[['.' for _ in range(8)] for _ in range(8)]
+# ferz=input()
+# row,col=8-int(ferz[1]),ord(ferz[0])-97
+# for i in range(8):
+# 	for j in range(8):
+# 		if abs(i - row) == abs(j - col) or i == row or j == col: checkdesk[i][j]='*'
+# checkdesk[row][col]='Q'
+# for rows in checkdesk:
+# 	print(*[i.ljust(2) for i in rows])
+
+# n=int(input())
+# matrix=[[0 for _ in range(n)] for _ in range(n)]
+# for i in range(n):
+# 	for j in range(n):
+# 		matrix[i][j]=abs(i-j)
+# for row in matrix:
+# 	print(*row)
+
+
+
+
+
+
+
+
+
 
 
 
