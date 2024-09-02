@@ -60,6 +60,73 @@
 # elif disc==0: print(-b/(2*a))
 # else: print("Нет корней")
 
-from math import tan, pi
-n,a=int(input()), float(input())
-print((n*a**2)/(4*tan(pi/n)))
+# from math import tan, pi
+# n,a=int(input()), float(input())
+# print((n*a**2)/(4*tan(pi/n)))
+
+# letter=ord(input())
+# if letter>=1071: print("Дальше букв нет")
+# else: print(chr(letter+1))
+
+# word=[input() for _ in range(4)]
+# weight=[sum([ord(i) for i in j]) for j in word]
+# words=dict(zip(word,weight))
+# print(max(words,key=lambda x: words[x]))
+
+# message=input()
+# coin=sum([ord(i) for i in message])*3
+# print(f"Текст сообщения: '{message}'\nСтоимость сообщения: {coin}🐝")
+
+# message=input()
+# coin=sum([ord(i) for i in message])*3
+# eng = "eyopaxcETOPAHXCBM"
+# rus = "еуорахсЕТОРАНХСВМ"
+# for a,b in zip(eng,rus):
+# 	message = message.replace(a,b)
+# new_coin=sum([ord(i) for i in message])*3
+# print(f"Старая стоимость: {coin}🐝\nНовая стоимость: {new_coin}🐝")
+
+# message=input()
+# for i in range(64):
+# 	uni=ord('А')+i
+# 	struni=f'[u-{uni}]'
+# 	if struni in message:
+# 		message=message.replace(struni,chr(uni))
+# print(message)
+
+# words=[]
+# while True:
+# 	n=input()
+# 	if n=='КОНЕЦ': break
+# 	else: words.append(n)
+# print(f'Минимальная строка ⬇️: {min(words)}\nМаксимальная строка ⬆️: {max(words)}')
+
+# words=[input() for _ in range(4)]
+# print((ord(max(words)[-1])*ord(min(words)[-1]))**2)
+
+# classes=[input() for _ in range(int(input()))]
+# for clas in classes:
+# 	if len(clas)==2 and 1039<ord(clas[1])<1056 and 0<=int(clas[0])<10 : print('YES')
+# 	else: print('NO')
+
+# str1=list(map(lambda x: x.lower(),filter(lambda x: x.isalpha(),[i for i in input()])))
+# str2=list(map(lambda x: x.lower(),filter(lambda x: x.isalpha(),[i for i in input()])))
+# print("YES" if str1==str2 else "NO")
+
+# print(*sorted([input() for _ in range(3)]))
+
+# libs=[input().split(', ') for j in range(int(input()))]
+# libs=[[i[0][:i[0].index('.')-2],i[1]] for i in libs]
+# sortlib=sorted(libs)
+# print("YES" if sortlib==libs else "NO")
+
+
+
+
+
+
+
+
+
+
+
